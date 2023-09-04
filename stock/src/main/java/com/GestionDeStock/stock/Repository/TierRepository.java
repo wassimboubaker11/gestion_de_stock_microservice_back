@@ -1,0 +1,15 @@
+package com.GestionDeStock.stock.Repository;
+
+
+import com.GestionDeStock.stock.Entity.Tier;
+import com.GestionDeStock.stock.Entity.Type;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface TierRepository extends JpaRepository<Tier, Integer > {
+    List<Tier> findAllByType(Type type);
+
+}
